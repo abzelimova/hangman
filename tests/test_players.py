@@ -7,9 +7,13 @@ def test_players():
     assert test_players._validate_word() == False
 
 def test_quess_new_word():
+    from hangman.players import ComputerPlayer
     from hangman.players import HumanPlayer
 
     value = 'Input your English word: '
+    test_ai = ComputerPlayer
+
+    assert len(test_ai.quess_new_word()) > 0
 
     test_quess_new_word = HumanPlayer('работай')
 
