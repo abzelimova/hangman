@@ -34,3 +34,5 @@ def test_comp_should_change_turns():
     test_ai = ComputerPlayer()
 
     assert test_ai.should_change_turns() is False
+
+

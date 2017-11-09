@@ -52,3 +52,10 @@ def test_draw_result_wrong(capsys):
     test_round.draw_result()
     out, _ = capsys.readouterr()
     assert out == value
+
+def test_mask_letter():
+    from hangman.round import Round
+    test_round = Round('python')
+    value = '_ _ _ _ _ _'
+
+    assert test_round.mask_word() == value
