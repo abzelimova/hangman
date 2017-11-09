@@ -15,9 +15,13 @@ def test_quess_new_word():
 
     assert len(test_ai.quess_new_word()) > 0
 
-    test_quess_new_word = HumanPlayer('работай')
+    test_quess_ru_word = HumanPlayer('работай')
+    test_quess_word = HumanPlayer('')
+    test_quess_new_word = HumanPlayer('python')
 
-    assert test_quess_new_word().quess_new_word() == value
+    assert test_quess_ru_word().quess_new_word() == value
+    assert test_quess_word().quess_new_word() == False
+    assert test_quess_new_word().quess_new_word() == True
 
 def test_select_other_player():
     from hangman.players import HumanPlayer
