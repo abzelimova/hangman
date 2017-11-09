@@ -14,3 +14,10 @@ def test_quess_new_word():
     test_quess_new_word = HumanPlayer('работай')
 
     assert test_quess_new_word().quess_new_word() == value
+
+def test_select_other_player():
+    from hangman.players import HumanPlayer
+    value = 'ai'
+    test_select_other_player = HumanPlayer('ai')
+    assert  test_select_other_player.select_other_player() == value
+
