@@ -2,6 +2,6 @@ def tsest_get_winner():
 
     from hangman.game import Game
 
-    test_get_winner = Game(2)
+    test_get_winner = Game('yay')
 
-    assert test_get_winner.get_winner() == int
+    assert test_get_winner.get_winner() == None
