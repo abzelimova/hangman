@@ -1,3 +1,9 @@
+def test_is_finished():
+    from hangman.round import Round
+    test_round = Round('python')
+
+    assert test_round.is_finished() is False
+
 def test_round():
 
     from hangman.round import Round
