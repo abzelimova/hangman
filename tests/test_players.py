@@ -29,3 +29,8 @@ def test_select_other_player():
     test_select_other_player = HumanPlayer('ai')
     assert  test_select_other_player.select_other_player() == value
 
+def test_comp_should_change_turns():
+    from hangman.players import ComputerPlayer
+    test_comp = ComputerPlayer()
+
+    assert test_comp.should_change_turns() is False
