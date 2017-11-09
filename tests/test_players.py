@@ -31,6 +31,6 @@ def test_select_other_player():
 
 def test_comp_should_change_turns():
     from hangman.players import ComputerPlayer
-    test_comp = ComputerPlayer()
+    test_ai = ComputerPlayer()
 
-    assert test_comp.should_change_turns() is False
+    assert test_ai.should_change_turns() is False
