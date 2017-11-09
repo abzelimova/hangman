@@ -5,3 +5,9 @@ def test_round():
     test_round = Round('python')
 
     assert test_round.is_word_solved() == False
+
+def test_game():
+    from hangman.players import HumanPlayer
+    word = None
+    assert  test_game._validate_word() == False
+
