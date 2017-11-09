@@ -4,7 +4,7 @@ def test_players():
 
     test_players = HumanPlayer()
 
-    assert test_players._validate_word() == False
+    assert test_players._validate_word('') == False
 
 def test_quess_new_word():
     from hangman.players import HumanPlayer
