@@ -25,3 +25,9 @@ def test_get_winner():
     test_game.add_round(test_round, test_player_first, test_player_second)
 
     assert str(test_game.get_winner()) == str(test_player_first.id)
+
+def test_get_winner_none():
+    from hangman.game import Game
+    test_game = Game()
+
+    assert test_game.get_winner() is None
