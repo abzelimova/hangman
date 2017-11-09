@@ -26,7 +26,7 @@ def test_quess_new_word():
 def test_select_other_player():
     from hangman.players import HumanPlayer
     value = 'ai'
-    test_select_other_player = HumanPlayer('ai')
+    test_select_other_player = HumanPlayer(value)
     assert  test_select_other_player.select_other_player() == value
 
 def test_comp_should_change_turns():
