@@ -1,4 +1,3 @@
-
 def test_round():
     from hangman.round import Round
 
