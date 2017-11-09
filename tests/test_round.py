@@ -32,12 +32,22 @@ def test_draw_field(capsys):
         assert out == i or out == '\n'
         test_round.tries += 1
 
-def test_draw_result_right(capsys):
+def test_result_right(capsys):
     from hangman.round import Round
     test_round = Round('no')
     value = 'Word is solved, a point goes to you!'
     test_round.try_letter('n')
     test_round.try_letter('o')
+
+    test_round.draw_result()
+    out, _ = capsys.readouterr()
+    assert out == value
+
+def test_draw_result_wrong(capsys):
+    from hangman.round import Round
+    test_round = Round('python')
+
+    value = 'Word is not solved, point goes to your opponent'
 
     test_round.draw_result()
     out, _ = capsys.readouterr()
